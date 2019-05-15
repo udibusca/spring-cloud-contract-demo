@@ -3,7 +3,7 @@ import org.springframework.cloud.contract.spec.Contract
 Contract.make {
     request {
         method 'POST'
-        url '/product'
+        url '/produto'
         headers {
             contentType(applicationJson())
         }
