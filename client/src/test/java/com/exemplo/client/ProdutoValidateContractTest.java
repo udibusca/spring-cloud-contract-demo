@@ -1,4 +1,4 @@
-package com.examplo.client;
+package com.exemplo.client;
 
 import static com.toomuchcoding.jsonassert.JsonAssertion.assertThatJson;
 import static org.hamcrest.Matchers.equalTo;
@@ -20,13 +20,13 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.web.client.RestTemplate;
 
-import com.examplo.client.Produto;
+import com.exemplo.client.Produto;
 import com.jayway.jsonpath.DocumentContext;
 import com.jayway.jsonpath.JsonPath;
 
 @SpringBootTest
 @RunWith(SpringRunner.class)
-@AutoConfigureStubRunner(ids = { "com.examplo:demo:+:stubs:8080" }, workOffline = true)
+@AutoConfigureStubRunner(ids = { "com.exemplo:demo:+:stubs:8080" }, workOffline = true)
 public class ProdutoValidateContractTest {
 
 	private RestTemplate restTemplate = new RestTemplate();

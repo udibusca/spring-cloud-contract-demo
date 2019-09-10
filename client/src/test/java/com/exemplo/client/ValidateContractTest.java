@@ -1,4 +1,4 @@
-package com.examplo.client;
+package com.exemplo.client;
 
 import static org.hamcrest.Matchers.equalTo;
 import static org.junit.Assert.assertThat;
@@ -15,7 +15,7 @@ import org.springframework.web.client.RestTemplate;
 
 @SpringBootTest
 @RunWith(SpringRunner.class)
-@AutoConfigureStubRunner(ids = { "com.examplo:demo:+:stubs:8080" }, workOffline = true)
+@AutoConfigureStubRunner(ids = { "com.exemplo:demo:+:stubs:8080" }, workOffline = true)
 public class ValidateContractTest {
 
 	private RestTemplate restTemplate = new RestTemplate();

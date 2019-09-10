@@ -1,11 +1,11 @@
-package com.examplo.demo.rest;
+package com.exemplo.demo.rest;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import com.examplo.demo.model.DemoResponse;
+import com.exemplo.demo.model.DemoResponse;
 
 @RestController
 @RequestMapping("/demo")
