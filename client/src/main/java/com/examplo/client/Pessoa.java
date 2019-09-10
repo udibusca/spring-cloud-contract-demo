@@ -1,4 +1,4 @@
-package com.example.demo.model;
+package com.examplo.client;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -9,9 +9,10 @@ import lombok.ToString;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class Produto {
+public class Pessoa {
 
     private String id;
     private String name;
+    private String email;
 
 }

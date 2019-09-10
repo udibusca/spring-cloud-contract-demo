@@ -1,8 +1,8 @@
-package com.example.demo;
+package com.examplo.demo;
 
-import com.example.demo.rest.DemoRestController;
-import com.example.demo.rest.PessoaRestController;
-import com.example.demo.rest.ProdutoRestController;
+import com.examplo.demo.rest.DemoRestController;
+import com.examplo.demo.rest.PessoaRestController;
+import com.examplo.demo.rest.ProdutoRestController;
 import com.jayway.restassured.module.mockmvc.RestAssuredMockMvc;
 import org.junit.Before;
 

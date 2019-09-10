@@ -1,10 +1,11 @@
-package com.example.demo.rest;
+package com.examplo.demo.rest;
 
-import com.example.demo.model.Produto;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import com.examplo.demo.model.Produto;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,5 +23,4 @@ public class ProdutoRestController {
         produtos.add(produto);
         return new ResponseEntity<>(produto, HttpStatus.CREATED);
     }
-
 }

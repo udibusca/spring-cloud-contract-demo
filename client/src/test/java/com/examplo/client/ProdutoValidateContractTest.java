@@ -1,4 +1,4 @@
-package com.example.client;
+package com.examplo.client;
 
 import static com.toomuchcoding.jsonassert.JsonAssertion.assertThatJson;
 import static org.hamcrest.Matchers.equalTo;
@@ -20,12 +20,13 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.web.client.RestTemplate;
 
+import com.examplo.client.Produto;
 import com.jayway.jsonpath.DocumentContext;
 import com.jayway.jsonpath.JsonPath;
 
 @SpringBootTest
 @RunWith(SpringRunner.class)
-@AutoConfigureStubRunner(ids = { "com.example:demo:+:stubs:8080" }, workOffline = true)
+@AutoConfigureStubRunner(ids = { "com.examplo:demo:+:stubs:8080" }, workOffline = true)
 public class ProdutoValidateContractTest {
 
 	private RestTemplate restTemplate = new RestTemplate();
@@ -33,18 +34,18 @@ public class ProdutoValidateContractTest {
 	@Test
 	public void test_post_product() throws Exception {
 
-		URI productPostUrl = new URI("http://127.0.0.1:8080/product");
+		URI productPostUrl = new URI("http://127.0.0.1:8080/produto");
 		Produto product = new Produto(null, UUID.randomUUID().toString());
 		HttpEntity<Produto> request = new HttpEntity<>(product);
 		ResponseEntity<String> responseEntity = restTemplate.exchange(productPostUrl, HttpMethod.POST, request,
 				String.class);
-
 		System.out.println(responseEntity.getBody());
 
 		assertThat(responseEntity.getStatusCode(), equalTo(HttpStatus.CREATED));
 		assertThat(responseEntity.getHeaders().getContentType(), equalTo(MediaType.APPLICATION_JSON));
 		assertTrue(responseEntity.getBody().contains("\"id\":"));
 		assertTrue(responseEntity.getBody().contains("\"name\":"));
+
 
 		DocumentContext parsedJson = JsonPath.parse(responseEntity.getBody().toString());
 		System.out.println(parsedJson.json().toString());

@@ -1,4 +1,4 @@
-package com.example.client;
+package com.examplo.client;
 
 import static org.hamcrest.Matchers.equalTo;
 import static org.junit.Assert.assertThat;
@@ -13,15 +13,12 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.web.client.RestTemplate;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-
 @SpringBootTest
 @RunWith(SpringRunner.class)
-@AutoConfigureStubRunner(ids = { "com.example:demo:+:stubs:8080" }, workOffline = true)
+@AutoConfigureStubRunner(ids = { "com.examplo:demo:+:stubs:8080" }, workOffline = true)
 public class ValidateContractTest {
 
 	private RestTemplate restTemplate = new RestTemplate();
-	private ObjectMapper mapper = new ObjectMapper();
 
 	@Test
 	public void validateContract() throws Exception {
